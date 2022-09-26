@@ -1,0 +1,1072 @@
+2022-08-22 21:18:56.594 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-22 21:18:57.017 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-22 21:18:57.017 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-22 21:18:57.020 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-22 21:18:57.020 +03:00 [INF] Hosting environment: Development
+2022-08-22 21:18:57.021 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-22 21:18:57.846 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-22 21:18:58.071 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-22 21:18:58.071 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-22 21:18:58.079 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 6.7517ms
+2022-08-22 21:18:58.079 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 236.3413ms
+2022-08-22 21:18:58.135 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 63.7959ms
+2022-08-22 21:18:58.176 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-22 21:18:58.220 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 44.1452ms
+2022-08-22 21:21:29.477 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7234/api/Account/login application/json 62
+2022-08-22 21:21:29.811 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.AccountController.Login (HotelListing.API)'
+2022-08-22 21:21:29.839 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(HotelListing.API.Models.Users.LoginDTO) on controller HotelListing.API.Controllers.AccountController (HotelListing.API).
+2022-08-22 21:21:31.076 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-22 21:21:33.096 +03:00 [INF] Executed DbCommand (67ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2022-08-22 21:21:33.291 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2022-08-22 21:21:33.308 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2022-08-22 21:21:33.571 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2022-08-22 21:21:33.609 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-08-22 21:21:33.718 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [AspNetUserTokens]
+WHERE [LoginProvider] = @p0 AND [Name] = @p1 AND [UserId] = @p2;
+SELECT @@ROWCOUNT;
+2022-08-22 21:21:33.739 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT;
+2022-08-22 21:21:33.774 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2022-08-22 21:21:33.787 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-08-22 21:21:33.797 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserTokens] ([LoginProvider], [Name], [UserId], [Value])
+VALUES (@p0, @p1, @p2, @p3);
+2022-08-22 21:21:33.799 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT;
+2022-08-22 21:21:33.801 +03:00 [INF] Registration attempt for recep@example.com
+2022-08-22 21:21:33.812 +03:00 [INF] Executing OkObjectResult, writing value of type 'HotelListing.API.Models.Users.AuthResponseDTO'.
+2022-08-22 21:21:33.826 +03:00 [INF] Executed action HotelListing.API.Controllers.AccountController.Login (HotelListing.API) in 3982.4454ms
+2022-08-22 21:21:33.827 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.AccountController.Login (HotelListing.API)'
+2022-08-22 21:21:33.837 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7234/api/Account/login application/json 62 - 200 - application/json;+charset=utf-8;+ver=1.0 4359.5988ms
+2022-08-22 21:21:49.931 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/Countries - -
+2022-08-22 21:21:50.018 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)'
+2022-08-22 21:21:50.021 +03:00 [INF] Route matched with {action = "GetCountries", controller = "Countries"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[HotelListing.API.Models.Country.GetCountryDTO]]] GetCountries() on controller HotelListing.API.Controllers.CountriesController (HotelListing.API).
+2022-08-22 21:21:50.054 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-22 21:21:50.061 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+2022-08-22 21:21:50.087 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.API.Models.Country.GetCountryDTO, HotelListing.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-22 21:21:50.089 +03:00 [INF] Executed action HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API) in 66.3391ms
+2022-08-22 21:21:50.090 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)'
+2022-08-22 21:21:50.092 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/Countries - - - 200 - application/json;+charset=utf-8;+ver=1.0 160.4711ms
+2022-08-22 21:22:45.286 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/Countries?api-version=1 - -
+2022-08-22 21:22:45.300 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)'
+2022-08-22 21:22:45.300 +03:00 [INF] Route matched with {action = "GetCountries", controller = "Countries"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[HotelListing.API.Models.Country.GetCountryDTO]]] GetCountries() on controller HotelListing.API.Controllers.CountriesController (HotelListing.API).
+2022-08-22 21:22:45.308 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-22 21:22:45.311 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+2022-08-22 21:22:45.315 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.API.Models.Country.GetCountryDTO, HotelListing.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-22 21:22:45.316 +03:00 [INF] Executed action HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API) in 14.4624ms
+2022-08-22 21:22:45.317 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)'
+2022-08-22 21:22:45.317 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/Countries?api-version=1 - - - 200 - application/json;+charset=utf-8;+ver=1 32.3170ms
+2022-08-22 21:22:51.067 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/Countries?api-version=2 - -
+2022-08-22 21:22:51.072 +03:00 [INF] Multiple candidate actions were found, but none matched the requested service API version '2'. Candidate actions: HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)
+2022-08-22 21:22:51.074 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Http.Endpoint'
+2022-08-22 21:22:51.077 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'.
+2022-08-22 21:22:51.079 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Http.Endpoint'
+2022-08-22 21:22:51.080 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/Countries?api-version=2 - - - 400 - application/json;+charset=utf-8 12.8830ms
+2022-08-22 21:22:56.469 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/Countries?api-version=1 - -
+2022-08-22 21:22:56.471 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)'
+2022-08-22 21:22:56.471 +03:00 [INF] Route matched with {action = "GetCountries", controller = "Countries"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[HotelListing.API.Models.Country.GetCountryDTO]]] GetCountries() on controller HotelListing.API.Controllers.CountriesController (HotelListing.API).
+2022-08-22 21:22:56.474 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-22 21:22:56.476 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+2022-08-22 21:22:56.478 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.API.Models.Country.GetCountryDTO, HotelListing.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-22 21:22:56.479 +03:00 [INF] Executed action HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API) in 6.3602ms
+2022-08-22 21:22:56.480 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)'
+2022-08-22 21:22:56.481 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/Countries?api-version=1 - - - 200 - application/json;+charset=utf-8;+ver=1 11.1832ms
+2022-08-22 21:23:28.217 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-22 21:23:28.400 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-22 21:23:28.400 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-22 21:23:28.403 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-22 21:23:28.403 +03:00 [INF] Hosting environment: Development
+2022-08-22 21:23:28.404 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-22 21:23:29.626 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-22 21:23:29.829 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-22 21:23:29.829 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-22 21:23:29.838 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 214.2228ms
+2022-08-22 21:23:29.839 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 10.0566ms
+2022-08-22 21:23:29.854 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 25.3850ms
+2022-08-22 21:23:29.920 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-22 21:23:29.970 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 49.9496ms
+2022-08-22 21:23:34.381 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/Countries?api-version=1 - -
+2022-08-22 21:23:34.405 +03:00 [INF] Multiple candidate actions were found, but none matched the requested service API version '1'. Candidate actions: HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)
+2022-08-22 21:23:34.624 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Http.Endpoint'
+2022-08-22 21:23:34.629 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'.
+2022-08-22 21:23:34.634 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Http.Endpoint'
+2022-08-22 21:23:34.634 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/Countries?api-version=1 - - - 400 - application/json;+charset=utf-8 253.3748ms
+2022-08-22 21:23:38.512 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/Countries?api-version=2 - -
+2022-08-22 21:23:38.521 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)'
+2022-08-22 21:23:38.535 +03:00 [INF] Route matched with {action = "GetCountries", controller = "Countries"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[HotelListing.API.Models.Country.GetCountryDTO]]] GetCountries() on controller HotelListing.API.Controllers.CountriesController (HotelListing.API).
+2022-08-22 21:23:39.502 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-22 21:23:40.049 +03:00 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+2022-08-22 21:23:40.139 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.API.Models.Country.GetCountryDTO, HotelListing.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-22 21:23:40.146 +03:00 [INF] Executed action HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API) in 1606.5136ms
+2022-08-22 21:23:40.148 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)'
+2022-08-22 21:23:40.156 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/Countries?api-version=2 - - - 200 - application/json;+charset=utf-8;+ver=2 1643.7821ms
+2022-08-22 21:27:04.139 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-22 21:27:04.324 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-22 21:27:04.325 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-22 21:27:04.327 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-22 21:27:04.328 +03:00 [INF] Hosting environment: Development
+2022-08-22 21:27:04.328 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-22 21:27:05.191 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-22 21:27:05.416 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-22 21:27:05.416 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-22 21:27:05.428 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 237.8094ms
+2022-08-22 21:27:05.428 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 8.7174ms
+2022-08-22 21:27:05.438 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 22.0353ms
+2022-08-22 21:27:05.501 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-22 21:27:05.546 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 44.7871ms
+2022-08-22 21:27:26.552 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/Countries?api-version=3 - -
+2022-08-22 21:27:26.578 +03:00 [INF] Multiple candidate actions were found, but none matched the requested service API version '3'. Candidate actions: HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)
+2022-08-22 21:27:26.789 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Http.Endpoint'
+2022-08-22 21:27:26.794 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'.
+2022-08-22 21:27:26.799 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Http.Endpoint'
+2022-08-22 21:27:26.800 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/Countries?api-version=3 - - - 400 - application/json;+charset=utf-8 248.2069ms
+2022-08-22 21:27:39.318 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/3/api/Countries? - -
+2022-08-22 21:27:39.321 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/3/api/Countries? - - - 404 0 - 2.3973ms
+2022-08-22 21:28:13.633 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/Countries? - -
+2022-08-22 21:28:13.641 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)'
+2022-08-22 21:28:13.656 +03:00 [INF] Route matched with {action = "GetCountries", controller = "Countries"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[HotelListing.API.Models.Country.GetCountryDTO]]] GetCountries() on controller HotelListing.API.Controllers.CountriesController (HotelListing.API).
+2022-08-22 21:28:14.656 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-22 21:28:15.218 +03:00 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+2022-08-22 21:28:15.310 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.API.Models.Country.GetCountryDTO, HotelListing.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-22 21:28:15.318 +03:00 [INF] Executed action HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API) in 1652.4736ms
+2022-08-22 21:28:15.320 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)'
+2022-08-22 21:28:15.328 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/Countries? - - - 200 - application/json;+charset=utf-8;+ver=1.0 1695.1804ms
+2022-08-22 21:36:11.080 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-22 21:36:11.249 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-22 21:36:11.250 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-22 21:36:11.253 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-22 21:36:11.253 +03:00 [INF] Hosting environment: Development
+2022-08-22 21:36:11.253 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-22 21:36:12.221 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-22 21:36:12.399 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-22 21:36:12.399 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-22 21:36:12.407 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 188.2293ms
+2022-08-22 21:36:12.407 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 7.3391ms
+2022-08-22 21:36:12.416 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 16.6942ms
+2022-08-22 21:36:12.480 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-22 21:36:12.528 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 47.3924ms
+2022-08-22 21:36:31.672 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/Countries - -
+2022-08-22 21:36:31.865 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-08-22 21:36:31.870 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2022-08-22 21:36:31.877 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/Countries - - - 404 0 - 204.7048ms
+2022-08-22 21:36:39.544 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/1/api/Countries - -
+2022-08-22 21:36:39.545 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-08-22 21:36:39.548 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2022-08-22 21:36:39.548 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/1/api/Countries - - - 404 0 - 4.7188ms
+2022-08-22 21:36:44.871 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/3/api/Countries - -
+2022-08-22 21:36:44.873 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-08-22 21:36:44.876 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2022-08-22 21:36:44.876 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/3/api/Countries - - - 404 0 - 5.5001ms
+2022-08-22 21:36:50.204 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/2/api/Countries - -
+2022-08-22 21:36:50.205 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-08-22 21:36:50.207 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2022-08-22 21:36:50.207 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/2/api/Countries - - - 404 0 - 3.2693ms
+2022-08-22 21:36:55.514 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7234/api/Account/login application/json 62
+2022-08-22 21:36:55.527 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.AccountController.Login (HotelListing.API)'
+2022-08-22 21:36:55.551 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(HotelListing.API.Models.Users.LoginDTO) on controller HotelListing.API.Controllers.AccountController (HotelListing.API).
+2022-08-22 21:36:56.568 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-22 21:36:57.865 +03:00 [INF] Executed DbCommand (64ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2022-08-22 21:36:58.042 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2022-08-22 21:36:58.060 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2022-08-22 21:36:58.104 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2022-08-22 21:36:58.141 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-08-22 21:36:58.248 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [AspNetUserTokens]
+WHERE [LoginProvider] = @p0 AND [Name] = @p1 AND [UserId] = @p2;
+SELECT @@ROWCOUNT;
+2022-08-22 21:36:58.269 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT;
+2022-08-22 21:36:58.304 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2022-08-22 21:36:58.317 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-08-22 21:36:58.327 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserTokens] ([LoginProvider], [Name], [UserId], [Value])
+VALUES (@p0, @p1, @p2, @p3);
+2022-08-22 21:36:58.328 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT;
+2022-08-22 21:36:58.331 +03:00 [INF] Registration attempt for recep@example.com
+2022-08-22 21:36:58.339 +03:00 [INF] Executing OkObjectResult, writing value of type 'HotelListing.API.Models.Users.AuthResponseDTO'.
+2022-08-22 21:36:58.350 +03:00 [INF] Executed action HotelListing.API.Controllers.AccountController.Login (HotelListing.API) in 2793.3592ms
+2022-08-22 21:36:58.351 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.AccountController.Login (HotelListing.API)'
+2022-08-22 21:36:58.359 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7234/api/Account/login application/json 62 - 200 - application/json;+charset=utf-8;+ver=1.0 2845.5204ms
+2022-08-22 21:37:08.942 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/2/api/Countries - -
+2022-08-22 21:37:08.959 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/2/api/Countries - - - 404 0 - 17.6485ms
+2022-08-22 21:37:34.144 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/version:2/api/Countries? - -
+2022-08-22 21:37:34.145 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/version:2/api/Countries? - - - 404 0 - 1.2074ms
+2022-08-22 21:37:53.259 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/version=2/Countries? - -
+2022-08-22 21:37:53.261 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/version=2/Countries? - - - 404 0 - 2.0180ms
+2022-08-22 21:38:03.106 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/2/Countries? - -
+2022-08-22 21:38:03.109 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/2/Countries? - - - 404 0 - 2.5980ms
+2022-08-22 21:38:06.525 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/2/Countries - -
+2022-08-22 21:38:06.525 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/2/Countries - - - 404 0 - 0.8196ms
+2022-08-22 21:38:21.752 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/v2/Countries - -
+2022-08-22 21:38:21.758 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.CountriesV2Controller.GetCountries (HotelListing.API)'
+2022-08-22 21:38:21.761 +03:00 [INF] Route matched with {action = "GetCountries", controller = "CountriesV"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[HotelListing.API.Models.Country.GetCountryDTO]]] GetCountries() on controller HotelListing.API.Controllers.CountriesV2Controller (HotelListing.API).
+2022-08-22 21:38:21.792 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-22 21:38:21.805 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+2022-08-22 21:38:21.828 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.API.Models.Country.GetCountryDTO, HotelListing.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-22 21:38:21.830 +03:00 [INF] Executed action HotelListing.API.Controllers.CountriesV2Controller.GetCountries (HotelListing.API) in 67.5611ms
+2022-08-22 21:38:21.830 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.CountriesV2Controller.GetCountries (HotelListing.API)'
+2022-08-22 21:38:21.832 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/v2/Countries - - - 200 - application/json;+charset=utf-8;+ver=2 80.2413ms
+2022-08-22 21:38:28.397 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/v1/Countries - -
+2022-08-22 21:38:28.398 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)'
+2022-08-22 21:38:28.401 +03:00 [INF] Route matched with {action = "GetCountries", controller = "Countries"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[HotelListing.API.Models.Country.GetCountryDTO]]] GetCountries() on controller HotelListing.API.Controllers.CountriesController (HotelListing.API).
+2022-08-22 21:38:28.409 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-22 21:38:28.412 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+2022-08-22 21:38:28.416 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.API.Models.Country.GetCountryDTO, HotelListing.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-22 21:38:28.417 +03:00 [INF] Executed action HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API) in 14.6858ms
+2022-08-22 21:38:28.418 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)'
+2022-08-22 21:38:28.419 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/v1/Countries - - - 200 - application/json;+charset=utf-8;+ver=1 21.4974ms
+2022-08-22 21:47:34.525 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-22 21:47:34.770 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-22 21:47:34.771 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-22 21:47:34.775 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-22 21:47:34.776 +03:00 [INF] Hosting environment: Development
+2022-08-22 21:47:34.777 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-22 21:47:37.100 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-22 21:47:37.294 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-22 21:47:37.294 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-22 21:47:37.299 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 4.5098ms
+2022-08-22 21:47:37.299 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 200.6321ms
+2022-08-22 21:47:37.310 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 16.4885ms
+2022-08-22 21:47:37.365 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-22 21:47:37.410 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 44.1152ms
+2022-08-22 21:52:19.424 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-22 21:52:19.589 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-22 21:52:19.590 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-22 21:52:19.593 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-22 21:52:19.593 +03:00 [INF] Hosting environment: Development
+2022-08-22 21:52:19.594 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-22 21:52:21.083 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-22 21:52:21.265 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-22 21:52:21.265 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-22 21:52:21.270 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 187.9244ms
+2022-08-22 21:52:21.271 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 6.2112ms
+2022-08-22 21:52:21.281 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 16.5488ms
+2022-08-22 21:52:21.336 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-22 21:52:21.386 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 50.0125ms
+2022-08-22 21:52:38.013 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-22 21:52:38.207 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-22 21:52:38.208 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-22 21:52:38.210 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-22 21:52:38.211 +03:00 [INF] Hosting environment: Development
+2022-08-22 21:52:38.211 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-22 21:52:38.805 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-22 21:52:38.988 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-22 21:52:38.988 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-22 21:52:38.997 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 7.6973ms
+2022-08-22 21:52:38.997 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 195.0367ms
+2022-08-22 21:52:39.006 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 17.8099ms
+2022-08-22 21:52:39.059 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-22 21:52:39.107 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 48.3148ms
+2022-08-22 21:52:45.705 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-22 21:52:45.708 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 2.4294ms
+2022-08-22 21:52:45.722 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/favicon.ico - -
+2022-08-22 21:52:45.769 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/favicon.ico - - - 404 0 - 46.7814ms
+2022-08-22 21:53:25.955 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-22 21:53:26.125 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-22 21:53:26.126 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-22 21:53:26.129 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-22 21:53:26.129 +03:00 [INF] Hosting environment: Development
+2022-08-22 21:53:26.129 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-22 21:53:27.095 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-22 21:53:27.291 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-22 21:53:27.291 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-22 21:53:27.298 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 205.8669ms
+2022-08-22 21:53:27.301 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 8.0191ms
+2022-08-22 21:53:27.317 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 26.1240ms
+2022-08-22 21:53:27.382 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-22 21:53:27.432 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 49.3576ms
+2022-08-22 21:56:16.140 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-22 21:56:16.338 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-22 21:56:16.339 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-22 21:56:16.341 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-22 21:56:16.342 +03:00 [INF] Hosting environment: Development
+2022-08-22 21:56:16.342 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-22 21:56:17.159 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-22 21:56:17.340 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-22 21:56:17.340 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-22 21:56:17.351 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 10.4086ms
+2022-08-22 21:56:17.351 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 195.0327ms
+2022-08-22 21:56:17.363 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 22.8842ms
+2022-08-22 21:56:17.428 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-22 21:56:17.489 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 61.3640ms
+2022-08-22 21:56:39.267 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-22 21:56:39.438 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-22 21:56:39.438 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-22 21:56:39.441 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-22 21:56:39.441 +03:00 [INF] Hosting environment: Development
+2022-08-22 21:56:39.442 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-22 21:56:40.342 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-22 21:56:40.389 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The constraint reference 'apiVersion' could not be resolved to a type. Register the constraint type with 'Microsoft.AspNetCore.Routing.RouteOptions.ConstraintMap'.
+   at Microsoft.AspNetCore.Routing.DefaultParameterPolicyFactory.Create(RoutePatternParameterPart parameter, String inlineText)
+   at Microsoft.AspNetCore.Routing.ParameterPolicyFactory.Create(RoutePatternParameterPart parameter, RoutePatternParameterPolicyReference reference)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.CreateCandidate(Endpoint endpoint, Int32 score)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.CreateCandidates(IReadOnlyList`1 endpoints)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.Build()
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher.CreateMatcher(IReadOnlyList`1 endpoints)
+   at Microsoft.AspNetCore.Routing.DataSourceDependentCache`1.Initialize()
+   at System.Threading.LazyInitializer.EnsureInitializedCore[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at System.Threading.LazyInitializer.EnsureInitialized[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher..ctor(EndpointDataSource dataSource, Lifetime lifetime, Func`1 matcherBuilderFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherFactory.CreateMatcher(EndpointDataSource dataSource)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.InitializeCoreAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|8_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-08-22 21:56:40.506 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 500 - text/html;+charset=utf-8 167.7050ms
+2022-08-22 21:56:40.508 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-22 21:56:40.508 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-22 21:56:40.517 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 9.5326ms
+2022-08-22 21:56:40.525 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 17.3392ms
+2022-08-22 21:57:15.981 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-22 21:57:16.183 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-22 21:57:16.183 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-22 21:57:16.186 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-22 21:57:16.187 +03:00 [INF] Hosting environment: Development
+2022-08-22 21:57:16.187 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-22 21:57:16.478 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-22 21:57:16.525 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The constraint reference 'apiVersion' could not be resolved to a type. Register the constraint type with 'Microsoft.AspNetCore.Routing.RouteOptions.ConstraintMap'.
+   at Microsoft.AspNetCore.Routing.DefaultParameterPolicyFactory.Create(RoutePatternParameterPart parameter, String inlineText)
+   at Microsoft.AspNetCore.Routing.ParameterPolicyFactory.Create(RoutePatternParameterPart parameter, RoutePatternParameterPolicyReference reference)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.CreateCandidate(Endpoint endpoint, Int32 score)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.CreateCandidates(IReadOnlyList`1 endpoints)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.Build()
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher.CreateMatcher(IReadOnlyList`1 endpoints)
+   at Microsoft.AspNetCore.Routing.DataSourceDependentCache`1.Initialize()
+   at System.Threading.LazyInitializer.EnsureInitializedCore[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at System.Threading.LazyInitializer.EnsureInitialized[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher..ctor(EndpointDataSource dataSource, Lifetime lifetime, Func`1 matcherBuilderFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherFactory.CreateMatcher(EndpointDataSource dataSource)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.InitializeCoreAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|8_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-08-22 21:57:16.660 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 500 - text/html;+charset=utf-8 184.2087ms
+2022-08-22 21:57:16.667 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-22 21:57:16.667 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-22 21:57:16.673 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 6.0775ms
+2022-08-22 21:57:16.681 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 14.3117ms
+2022-08-22 21:57:35.934 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-22 21:57:36.099 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-22 21:57:36.099 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-22 21:57:36.102 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-22 21:57:36.102 +03:00 [INF] Hosting environment: Development
+2022-08-22 21:57:36.103 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-22 21:57:36.538 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-22 21:57:36.586 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The constraint reference 'apiVersion' could not be resolved to a type. Register the constraint type with 'Microsoft.AspNetCore.Routing.RouteOptions.ConstraintMap'.
+   at Microsoft.AspNetCore.Routing.DefaultParameterPolicyFactory.Create(RoutePatternParameterPart parameter, String inlineText)
+   at Microsoft.AspNetCore.Routing.ParameterPolicyFactory.Create(RoutePatternParameterPart parameter, RoutePatternParameterPolicyReference reference)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.CreateCandidate(Endpoint endpoint, Int32 score)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.CreateCandidates(IReadOnlyList`1 endpoints)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.Build()
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher.CreateMatcher(IReadOnlyList`1 endpoints)
+   at Microsoft.AspNetCore.Routing.DataSourceDependentCache`1.Initialize()
+   at System.Threading.LazyInitializer.EnsureInitializedCore[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at System.Threading.LazyInitializer.EnsureInitialized[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher..ctor(EndpointDataSource dataSource, Lifetime lifetime, Func`1 matcherBuilderFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherFactory.CreateMatcher(EndpointDataSource dataSource)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.InitializeCoreAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|8_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-08-22 21:57:36.756 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 500 - text/html;+charset=utf-8 219.7751ms
+2022-08-22 21:57:36.773 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-22 21:57:36.773 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-22 21:57:36.786 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 12.9513ms
+2022-08-22 21:57:36.794 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 21.8618ms
+2022-08-22 21:57:45.035 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-22 21:57:45.203 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-22 21:57:45.204 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-22 21:57:45.206 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-22 21:57:45.207 +03:00 [INF] Hosting environment: Development
+2022-08-22 21:57:45.207 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-22 21:57:45.862 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-22 21:57:45.905 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The constraint reference 'apiVersion' could not be resolved to a type. Register the constraint type with 'Microsoft.AspNetCore.Routing.RouteOptions.ConstraintMap'.
+   at Microsoft.AspNetCore.Routing.DefaultParameterPolicyFactory.Create(RoutePatternParameterPart parameter, String inlineText)
+   at Microsoft.AspNetCore.Routing.ParameterPolicyFactory.Create(RoutePatternParameterPart parameter, RoutePatternParameterPolicyReference reference)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.CreateCandidate(Endpoint endpoint, Int32 score)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.CreateCandidates(IReadOnlyList`1 endpoints)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.Build()
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher.CreateMatcher(IReadOnlyList`1 endpoints)
+   at Microsoft.AspNetCore.Routing.DataSourceDependentCache`1.Initialize()
+   at System.Threading.LazyInitializer.EnsureInitializedCore[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at System.Threading.LazyInitializer.EnsureInitialized[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher..ctor(EndpointDataSource dataSource, Lifetime lifetime, Func`1 matcherBuilderFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherFactory.CreateMatcher(EndpointDataSource dataSource)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.InitializeCoreAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|8_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-08-22 21:57:46.023 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 500 - text/html;+charset=utf-8 163.1034ms
+2022-08-22 21:57:46.028 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-22 21:57:46.028 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-22 21:57:46.033 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 4.7580ms
+2022-08-22 21:57:46.038 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 10.5142ms
+2022-08-22 21:58:52.746 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-22 21:58:52.922 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-22 21:58:52.923 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-22 21:58:52.925 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-22 21:58:52.926 +03:00 [INF] Hosting environment: Development
+2022-08-22 21:58:52.926 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-22 21:58:53.187 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-22 21:58:53.392 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-22 21:58:53.392 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-22 21:58:53.401 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 214.5895ms
+2022-08-22 21:58:53.401 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 6.9340ms
+2022-08-22 21:58:53.409 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 17.5562ms
+2022-08-22 21:58:53.466 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-22 21:58:53.571 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 105.4026ms
+2022-08-22 21:59:10.800 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-22 21:59:10.891 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-22 21:59:10.892 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-22 21:59:10.894 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-22 21:59:10.894 +03:00 [INF] Hosting environment: Development
+2022-08-22 21:59:10.895 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-22 21:59:12.474 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-22 21:59:12.666 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-22 21:59:12.667 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-22 21:59:12.670 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-22 21:59:12.670 +03:00 [INF] Hosting environment: Development
+2022-08-22 21:59:12.671 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-22 21:59:13.119 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-22 21:59:13.319 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-22 21:59:13.319 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-22 21:59:13.325 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 5.3192ms
+2022-08-22 21:59:13.325 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 210.4423ms
+2022-08-22 21:59:13.334 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 14.9432ms
+2022-08-22 21:59:13.392 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-22 21:59:13.488 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 95.7308ms
+2022-08-22 21:59:22.992 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-22 21:59:23.165 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-22 21:59:23.166 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-22 21:59:23.168 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-22 21:59:23.168 +03:00 [INF] Hosting environment: Development
+2022-08-22 21:59:23.169 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-22 21:59:24.096 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-22 21:59:24.292 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-22 21:59:24.292 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-22 21:59:24.301 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 8.8753ms
+2022-08-22 21:59:24.301 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 207.8120ms
+2022-08-22 21:59:24.310 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 18.7460ms
+2022-08-22 21:59:24.364 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-22 21:59:24.406 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 42.0922ms
+2022-08-22 21:59:49.907 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-22 21:59:50.076 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-22 21:59:50.077 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-22 21:59:50.079 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-22 21:59:50.080 +03:00 [INF] Hosting environment: Development
+2022-08-22 21:59:50.080 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-22 21:59:51.079 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-22 21:59:51.284 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-22 21:59:51.284 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-22 21:59:51.293 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 213.2728ms
+2022-08-22 21:59:51.293 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 7.5637ms
+2022-08-22 21:59:51.304 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 19.8525ms
+2022-08-22 21:59:51.362 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-22 21:59:51.482 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 120.5047ms
+2022-08-22 22:00:16.556 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-22 22:00:16.650 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-22 22:00:16.650 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-22 22:00:16.653 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-22 22:00:16.653 +03:00 [INF] Hosting environment: Development
+2022-08-22 22:00:16.653 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-22 22:00:17.897 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-22 22:00:18.066 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-22 22:00:18.067 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-22 22:00:18.069 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-22 22:00:18.070 +03:00 [INF] Hosting environment: Development
+2022-08-22 22:00:18.070 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-22 22:00:18.714 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-22 22:00:18.930 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-22 22:00:18.930 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-22 22:00:18.938 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 224.1098ms
+2022-08-22 22:00:18.938 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 8.9430ms
+2022-08-22 22:00:18.956 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 26.5662ms
+2022-08-22 22:00:19.011 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-22 22:00:19.136 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 124.9974ms
+2022-08-22 22:00:41.981 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/api/v1/Countries?api-version=1 - -
+2022-08-22 22:00:42.035 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-08-22 22:00:42.041 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-08-22 22:00:42.042 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/api/v1/Countries?api-version=1 - - - 401 0 - 61.5350ms
+2022-08-22 22:01:03.424 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/api/v2/Countries?api-version=1 - -
+2022-08-22 22:01:03.437 +03:00 [INF] Multiple candidate actions were found, but none matched the requested service API version '2'. Candidate actions: HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)
+2022-08-22 22:01:03.440 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Http.Endpoint'
+2022-08-22 22:01:03.452 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'.
+2022-08-22 22:01:03.457 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Http.Endpoint'
+2022-08-22 22:01:03.458 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/api/v2/Countries?api-version=1 - - - 400 - application/json;+charset=utf-8 33.6349ms
+2022-08-22 22:01:23.494 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/api/v3/Countries?api-version=1 - -
+2022-08-22 22:01:23.497 +03:00 [INF] Multiple candidate actions were found, but none matched the requested service API version '3'. Candidate actions: HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)
+2022-08-22 22:01:23.498 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Http.Endpoint'
+2022-08-22 22:01:23.499 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'.
+2022-08-22 22:01:23.500 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Http.Endpoint'
+2022-08-22 22:01:23.501 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/api/v3/Countries?api-version=1 - - - 400 - application/json;+charset=utf-8 6.9151ms
+2022-08-22 22:01:26.420 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/api/v3/Countries?api-version=1 - -
+2022-08-22 22:01:26.420 +03:00 [INF] Multiple candidate actions were found, but none matched the requested service API version '3'. Candidate actions: HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)
+2022-08-22 22:01:26.421 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Http.Endpoint'
+2022-08-22 22:01:26.422 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'.
+2022-08-22 22:01:26.423 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Http.Endpoint'
+2022-08-22 22:01:26.424 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/api/v3/Countries?api-version=1 - - - 400 - application/json;+charset=utf-8 4.2435ms
+2022-08-22 22:02:37.296 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/api/v1/Countries?api-version=1 - -
+2022-08-22 22:02:37.301 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-08-22 22:02:37.301 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-08-22 22:02:37.302 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/api/v1/Countries?api-version=1 - - - 401 0 - 6.2007ms
+2022-08-22 22:03:34.583 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7234/api/Account/login application/json;+ver=1.0 57
+2022-08-22 22:03:34.597 +03:00 [INF] CORS policy execution successful.
+2022-08-22 22:03:34.597 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.AccountController.Login (HotelListing.API)'
+2022-08-22 22:03:34.618 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(HotelListing.API.Models.Users.LoginDTO) on controller HotelListing.API.Controllers.AccountController (HotelListing.API).
+2022-08-22 22:03:35.640 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-22 22:03:36.984 +03:00 [INF] Executed DbCommand (65ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2022-08-22 22:03:37.032 +03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-08-22 22:03:37.040 +03:00 [INF] Executed action HotelListing.API.Controllers.AccountController.Login (HotelListing.API) in 2416.625ms
+2022-08-22 22:03:37.042 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.AccountController.Login (HotelListing.API)'
+2022-08-22 22:03:37.050 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7234/api/Account/login application/json;+ver=1.0 57 - 401 - application/problem+json;+charset=utf-8;+ver=1.0 2467.0399ms
+2022-08-22 22:03:52.032 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7234/api/Account/login application/json;+ver=1.0 59
+2022-08-22 22:03:52.034 +03:00 [INF] CORS policy execution successful.
+2022-08-22 22:03:52.034 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.AccountController.Login (HotelListing.API)'
+2022-08-22 22:03:52.035 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(HotelListing.API.Models.Users.LoginDTO) on controller HotelListing.API.Controllers.AccountController (HotelListing.API).
+2022-08-22 22:03:52.072 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-22 22:03:52.081 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2022-08-22 22:03:52.229 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2022-08-22 22:03:52.246 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2022-08-22 22:03:52.378 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2022-08-22 22:03:52.417 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-08-22 22:03:52.524 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [AspNetUserTokens]
+WHERE [LoginProvider] = @p0 AND [Name] = @p1 AND [UserId] = @p2;
+SELECT @@ROWCOUNT;
+2022-08-22 22:03:52.544 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT;
+2022-08-22 22:03:52.577 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2022-08-22 22:03:52.590 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-08-22 22:03:52.600 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserTokens] ([LoginProvider], [Name], [UserId], [Value])
+VALUES (@p0, @p1, @p2, @p3);
+2022-08-22 22:03:52.601 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT;
+2022-08-22 22:03:52.604 +03:00 [INF] Registration attempt for recep@example.com
+2022-08-22 22:03:52.605 +03:00 [INF] Executing OkObjectResult, writing value of type 'HotelListing.API.Models.Users.AuthResponseDTO'.
+2022-08-22 22:03:52.606 +03:00 [INF] Executed action HotelListing.API.Controllers.AccountController.Login (HotelListing.API) in 569.9962ms
+2022-08-22 22:03:52.607 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.AccountController.Login (HotelListing.API)'
+2022-08-22 22:03:52.608 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7234/api/Account/login application/json;+ver=1.0 59 - 200 - application/json;+charset=utf-8;+ver=1.0 575.5810ms
+2022-08-22 22:03:59.862 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/api/v1/Countries - -
+2022-08-22 22:03:59.863 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-08-22 22:03:59.864 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-08-22 22:03:59.865 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/api/v1/Countries - - - 401 0 - 2.4975ms
+2022-08-22 22:04:03.219 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/api/v1/Countries - -
+2022-08-22 22:04:03.220 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-08-22 22:04:03.221 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-08-22 22:04:03.221 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/api/v1/Countries - - - 401 0 - 1.9445ms
+2022-08-22 22:04:47.384 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7234/api/Account/login application/json 62
+2022-08-22 22:04:47.386 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.AccountController.Login (HotelListing.API)'
+2022-08-22 22:04:47.386 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(HotelListing.API.Models.Users.LoginDTO) on controller HotelListing.API.Controllers.AccountController (HotelListing.API).
+2022-08-22 22:04:47.399 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-22 22:04:47.402 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2022-08-22 22:04:47.407 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2022-08-22 22:04:47.409 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2022-08-22 22:04:47.412 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2022-08-22 22:04:47.414 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-08-22 22:04:47.417 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [AspNetUserTokens]
+WHERE [LoginProvider] = @p0 AND [Name] = @p1 AND [UserId] = @p2;
+SELECT @@ROWCOUNT;
+2022-08-22 22:04:47.419 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT;
+2022-08-22 22:04:47.428 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2022-08-22 22:04:47.430 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-08-22 22:04:47.433 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserTokens] ([LoginProvider], [Name], [UserId], [Value])
+VALUES (@p0, @p1, @p2, @p3);
+2022-08-22 22:04:47.434 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT;
+2022-08-22 22:04:47.436 +03:00 [INF] Registration attempt for recep@example.com
+2022-08-22 22:04:47.437 +03:00 [INF] Executing OkObjectResult, writing value of type 'HotelListing.API.Models.Users.AuthResponseDTO'.
+2022-08-22 22:04:47.439 +03:00 [INF] Executed action HotelListing.API.Controllers.AccountController.Login (HotelListing.API) in 51.3969ms
+2022-08-22 22:04:47.440 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.AccountController.Login (HotelListing.API)'
+2022-08-22 22:04:47.440 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7234/api/Account/login application/json 62 - 200 - application/json;+charset=utf-8;+ver=1.0 56.5135ms
+2022-08-22 22:05:00.355 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/v1/Countries - -
+2022-08-22 22:05:00.422 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)'
+2022-08-22 22:05:00.425 +03:00 [INF] Route matched with {action = "GetCountries", controller = "Countries"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[HotelListing.API.Models.Country.GetCountryDTO]]] GetCountries() on controller HotelListing.API.Controllers.CountriesController (HotelListing.API).
+2022-08-22 22:05:00.429 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-22 22:05:00.441 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+2022-08-22 22:05:00.463 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.API.Models.Country.GetCountryDTO, HotelListing.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-22 22:05:00.465 +03:00 [INF] Executed action HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API) in 39.2645ms
+2022-08-22 22:05:00.466 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)'
+2022-08-22 22:05:00.468 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/v1/Countries - - - 200 - application/json;+charset=utf-8;+ver=1 113.0254ms
+2022-08-22 22:05:18.387 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/v2/Countries - -
+2022-08-22 22:05:18.388 +03:00 [INF] Multiple candidate actions were found, but none matched the requested service API version '2'. Candidate actions: HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)
+2022-08-22 22:05:18.389 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Http.Endpoint'
+2022-08-22 22:05:18.390 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'.
+2022-08-22 22:05:18.391 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Http.Endpoint'
+2022-08-22 22:05:18.391 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/v2/Countries - - - 400 - application/json;+charset=utf-8 4.5459ms
+2022-08-22 22:05:23.575 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/v3/Countries - -
+2022-08-22 22:05:23.576 +03:00 [INF] Multiple candidate actions were found, but none matched the requested service API version '3'. Candidate actions: HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)
+2022-08-22 22:05:23.577 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Http.Endpoint'
+2022-08-22 22:05:23.578 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'.
+2022-08-22 22:05:23.579 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Http.Endpoint'
+2022-08-22 22:05:23.579 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/v3/Countries - - - 400 - application/json;+charset=utf-8 3.9668ms
+2022-08-22 22:05:27.842 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/v4/Countries - -
+2022-08-22 22:05:27.843 +03:00 [INF] Multiple candidate actions were found, but none matched the requested service API version '4'. Candidate actions: HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)
+2022-08-22 22:05:27.844 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Http.Endpoint'
+2022-08-22 22:05:27.844 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'.
+2022-08-22 22:05:27.846 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Http.Endpoint'
+2022-08-22 22:05:27.846 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/v4/Countries - - - 400 - application/json;+charset=utf-8 3.8907ms
+2022-08-22 22:05:46.090 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/v4/CountriesV2 - -
+2022-08-22 22:05:46.092 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/v4/CountriesV2 - - - 404 0 - 1.7116ms
+2022-08-22 22:05:50.801 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/v2/CountriesV2 - -
+2022-08-22 22:05:50.802 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/v2/CountriesV2 - - - 404 0 - 0.8813ms
+2022-08-22 22:05:55.262 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/v1/CountriesV2 - -
+2022-08-22 22:05:55.263 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/v1/CountriesV2 - - - 404 0 - 0.8743ms
+2022-08-22 22:06:00.267 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/v1/Countries - -
+2022-08-22 22:06:00.268 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)'
+2022-08-22 22:06:00.268 +03:00 [INF] Route matched with {action = "GetCountries", controller = "Countries"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[HotelListing.API.Models.Country.GetCountryDTO]]] GetCountries() on controller HotelListing.API.Controllers.CountriesController (HotelListing.API).
+2022-08-22 22:06:00.270 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-22 22:06:00.272 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+2022-08-22 22:06:00.276 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.API.Models.Country.GetCountryDTO, HotelListing.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-22 22:06:00.277 +03:00 [INF] Executed action HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API) in 7.8112ms
+2022-08-22 22:06:00.278 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)'
+2022-08-22 22:06:00.279 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/v1/Countries - - - 200 - application/json;+charset=utf-8;+ver=1 11.9316ms
+2022-08-22 22:06:06.081 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/v2/Countries - -
+2022-08-22 22:06:06.082 +03:00 [INF] Multiple candidate actions were found, but none matched the requested service API version '2'. Candidate actions: HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)
+2022-08-22 22:06:06.085 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Http.Endpoint'
+2022-08-22 22:06:06.085 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'.
+2022-08-22 22:06:06.087 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Http.Endpoint'
+2022-08-22 22:06:06.087 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/v2/Countries - - - 400 - application/json;+charset=utf-8 6.0875ms
+2022-08-22 22:06:39.617 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-22 22:06:39.794 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-22 22:06:39.795 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-22 22:06:39.797 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-22 22:06:39.798 +03:00 [INF] Hosting environment: Development
+2022-08-22 22:06:39.798 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-22 22:06:40.694 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-22 22:06:40.873 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-22 22:06:40.873 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-22 22:06:40.879 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 5.0469ms
+2022-08-22 22:06:40.879 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 187.3493ms
+2022-08-22 22:06:40.887 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 14.5684ms
+2022-08-22 22:06:40.944 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-22 22:06:41.067 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 122.1202ms
+2022-08-22 22:06:48.137 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/v2/Countries - -
+2022-08-22 22:06:48.362 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.CountriesV2Controller.GetCountries (HotelListing.API)'
+2022-08-22 22:06:48.376 +03:00 [INF] Route matched with {action = "GetCountries", controller = "CountriesV"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[HotelListing.API.Models.Country.GetCountryDTO]]] GetCountries() on controller HotelListing.API.Controllers.CountriesV2Controller (HotelListing.API).
+2022-08-22 22:06:49.347 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-22 22:06:49.927 +03:00 [INF] Executed DbCommand (44ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+2022-08-22 22:06:50.021 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.API.Models.Country.GetCountryDTO, HotelListing.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-22 22:06:50.037 +03:00 [INF] Executed action HotelListing.API.Controllers.CountriesV2Controller.GetCountries (HotelListing.API) in 1656.5522ms
+2022-08-22 22:06:50.038 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.CountriesV2Controller.GetCountries (HotelListing.API)'
+2022-08-22 22:06:50.047 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/v2/Countries - - - 200 - application/json;+charset=utf-8;+ver=2 1909.6264ms
+2022-08-22 22:06:55.196 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/v1/Countries - -
+2022-08-22 22:06:55.198 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)'
+2022-08-22 22:06:55.201 +03:00 [INF] Route matched with {action = "GetCountries", controller = "Countries"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[HotelListing.API.Models.Country.GetCountryDTO]]] GetCountries() on controller HotelListing.API.Controllers.CountriesController (HotelListing.API).
+2022-08-22 22:06:55.230 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-22 22:06:55.236 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+2022-08-22 22:06:55.238 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.API.Models.Country.GetCountryDTO, HotelListing.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-22 22:06:55.239 +03:00 [INF] Executed action HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API) in 36.7698ms
+2022-08-22 22:06:55.240 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)'
+2022-08-22 22:06:55.241 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/v1/Countries - - - 200 - application/json;+charset=utf-8;+ver=1 44.5942ms
+2022-08-22 22:07:04.372 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/v2/Countries - -
+2022-08-22 22:07:04.375 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.CountriesV2Controller.GetCountries (HotelListing.API)'
+2022-08-22 22:07:04.376 +03:00 [INF] Route matched with {action = "GetCountries", controller = "CountriesV"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[HotelListing.API.Models.Country.GetCountryDTO]]] GetCountries() on controller HotelListing.API.Controllers.CountriesV2Controller (HotelListing.API).
+2022-08-22 22:07:04.386 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-22 22:07:04.389 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+2022-08-22 22:07:04.390 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.API.Models.Country.GetCountryDTO, HotelListing.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-22 22:07:04.391 +03:00 [INF] Executed action HotelListing.API.Controllers.CountriesV2Controller.GetCountries (HotelListing.API) in 13.0078ms
+2022-08-22 22:07:04.392 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.CountriesV2Controller.GetCountries (HotelListing.API)'
+2022-08-22 22:07:04.393 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/v2/Countries - - - 200 - application/json;+charset=utf-8;+ver=2 20.6243ms
+2022-08-22 22:08:31.972 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-22 22:08:32.144 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-22 22:08:32.144 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-22 22:08:32.147 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-22 22:08:32.147 +03:00 [INF] Hosting environment: Development
+2022-08-22 22:08:32.147 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-22 22:08:32.678 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-22 22:08:32.873 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-22 22:08:32.873 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-22 22:08:32.883 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 208.2410ms
+2022-08-22 22:08:32.883 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 6.7527ms
+2022-08-22 22:08:32.891 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 17.8314ms
+2022-08-22 22:08:32.945 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-22 22:08:33.065 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 119.9439ms
+2022-08-22 22:08:41.553 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/api/v1/countries - -
+2022-08-22 22:08:41.610 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-08-22 22:08:41.615 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-08-22 22:08:41.616 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/api/v1/countries - - - 401 0 - 63.1599ms
+2022-08-22 22:20:50.072 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-22 22:20:50.251 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-22 22:20:50.252 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-22 22:20:50.258 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-22 22:20:50.259 +03:00 [INF] Hosting environment: Development
+2022-08-22 22:20:50.259 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-22 22:20:50.663 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-22 22:20:50.849 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-22 22:20:50.849 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-22 22:20:50.856 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 7.1374ms
+2022-08-22 22:20:50.856 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 195.4133ms
+2022-08-22 22:20:50.868 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 19.7248ms
+2022-08-22 22:20:50.926 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-22 22:20:51.049 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 123.3519ms
+2022-08-22 22:20:59.416 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/api/v1/countries - -
+2022-08-22 22:20:59.435 +03:00 [INF] No cached response available for this request.
+2022-08-22 22:20:59.500 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-08-22 22:20:59.505 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-08-22 22:20:59.506 +03:00 [INF] The response could not be cached for this request.
+2022-08-22 22:20:59.507 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/api/v1/countries - - - 401 0 - 91.2504ms
+2022-08-22 22:22:57.515 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-22 22:22:57.733 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-22 22:22:57.734 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-22 22:22:57.736 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-22 22:22:57.737 +03:00 [INF] Hosting environment: Development
+2022-08-22 22:22:57.737 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-22 22:22:58.612 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-22 22:22:58.828 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-22 22:22:58.828 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-22 22:22:58.836 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 228.3956ms
+2022-08-22 22:22:58.836 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 7.8002ms
+2022-08-22 22:22:58.844 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 16.6977ms
+2022-08-22 22:22:58.905 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-22 22:22:59.046 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 141.0185ms
+2022-08-22 22:23:30.458 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7234/api/Countries application/json 49
+2022-08-22 22:23:30.650 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-08-22 22:23:30.655 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2022-08-22 22:23:30.661 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7234/api/Countries application/json 49 - 404 0 - 203.1106ms
+2022-08-22 22:23:35.155 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7234/api/Account/login application/json 62
+2022-08-22 22:23:35.170 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.AccountController.Login (HotelListing.API)'
+2022-08-22 22:23:35.192 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(HotelListing.API.Models.Users.LoginDTO) on controller HotelListing.API.Controllers.AccountController (HotelListing.API).
+2022-08-22 22:23:36.183 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-22 22:23:37.423 +03:00 [INF] Executed DbCommand (66ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2022-08-22 22:23:37.599 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2022-08-22 22:23:37.616 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2022-08-22 22:23:37.658 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2022-08-22 22:23:37.695 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-08-22 22:23:37.801 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [AspNetUserTokens]
+WHERE [LoginProvider] = @p0 AND [Name] = @p1 AND [UserId] = @p2;
+SELECT @@ROWCOUNT;
+2022-08-22 22:23:37.822 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT;
+2022-08-22 22:23:37.857 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2022-08-22 22:23:37.870 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-08-22 22:23:37.879 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserTokens] ([LoginProvider], [Name], [UserId], [Value])
+VALUES (@p0, @p1, @p2, @p3);
+2022-08-22 22:23:37.881 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT;
+2022-08-22 22:23:37.884 +03:00 [INF] Registration attempt for recep@example.com
+2022-08-22 22:23:37.892 +03:00 [INF] Executing OkObjectResult, writing value of type 'HotelListing.API.Models.Users.AuthResponseDTO'.
+2022-08-22 22:23:37.902 +03:00 [INF] Executed action HotelListing.API.Controllers.AccountController.Login (HotelListing.API) in 2705.5647ms
+2022-08-22 22:23:37.904 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.AccountController.Login (HotelListing.API)'
+2022-08-22 22:23:37.912 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7234/api/Account/login application/json 62 - 200 - application/json;+charset=utf-8;+ver=1.0 2757.0642ms
+2022-08-22 22:24:02.628 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7234/api/v1/Countries application/json 49
+2022-08-22 22:24:02.651 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.CountriesController.PostCountry (HotelListing.API)'
+2022-08-22 22:24:02.654 +03:00 [INF] Route matched with {action = "PostCountry", controller = "Countries"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HotelListing.API.Data.Country]] PostCountry(HotelListing.API.Models.Country.CreateCountryDTO) on controller HotelListing.API.Controllers.CountriesController (HotelListing.API).
+2022-08-22 22:24:02.695 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-22 22:24:02.741 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Countries] ([Name], [ShortName])
+VALUES (@p0, @p1);
+SELECT [Id]
+FROM [Countries]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-08-22 22:24:02.767 +03:00 [INF] Executing CreatedAtActionResult, writing value of type 'HotelListing.API.Data.Country'.
+2022-08-22 22:24:02.788 +03:00 [INF] Executed action HotelListing.API.Controllers.CountriesController.PostCountry (HotelListing.API) in 132.9534ms
+2022-08-22 22:24:02.789 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.CountriesController.PostCountry (HotelListing.API)'
+2022-08-22 22:24:02.791 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7234/api/v1/Countries application/json 49 - 201 - application/json;+charset=utf-8;+ver=1 162.8061ms
+2022-08-22 22:24:13.433 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/v2/Countries - -
+2022-08-22 22:24:13.434 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.CountriesV2Controller.GetCountries (HotelListing.API)'
+2022-08-22 22:24:13.437 +03:00 [INF] Route matched with {action = "GetCountries", controller = "CountriesV"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[HotelListing.API.Models.Country.GetCountryDTO]]] GetCountries() on controller HotelListing.API.Controllers.CountriesV2Controller (HotelListing.API).
+2022-08-22 22:24:13.445 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-22 22:24:13.453 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+2022-08-22 22:24:13.464 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.API.Models.Country.GetCountryDTO, HotelListing.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-22 22:24:13.465 +03:00 [INF] Executed action HotelListing.API.Controllers.CountriesV2Controller.GetCountries (HotelListing.API) in 27.4432ms
+2022-08-22 22:24:13.466 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.CountriesV2Controller.GetCountries (HotelListing.API)'
+2022-08-22 22:24:13.467 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/v2/Countries - - - 200 - application/json;+charset=utf-8;+ver=2 34.3546ms
+2022-08-22 22:24:17.461 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/v2/Countries - -
+2022-08-22 22:24:17.462 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.CountriesV2Controller.GetCountries (HotelListing.API)'
+2022-08-22 22:24:17.463 +03:00 [INF] Route matched with {action = "GetCountries", controller = "CountriesV"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[HotelListing.API.Models.Country.GetCountryDTO]]] GetCountries() on controller HotelListing.API.Controllers.CountriesV2Controller (HotelListing.API).
+2022-08-22 22:24:17.465 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-22 22:24:17.467 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+2022-08-22 22:24:17.469 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.API.Models.Country.GetCountryDTO, HotelListing.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-22 22:24:17.470 +03:00 [INF] Executed action HotelListing.API.Controllers.CountriesV2Controller.GetCountries (HotelListing.API) in 6.338ms
+2022-08-22 22:24:17.471 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.CountriesV2Controller.GetCountries (HotelListing.API)'
+2022-08-22 22:24:17.471 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/v2/Countries - - - 200 - application/json;+charset=utf-8;+ver=2 10.6895ms
+2022-08-22 22:24:31.455 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7234/api/v1/Countries application/json 48
+2022-08-22 22:24:31.456 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.CountriesController.PostCountry (HotelListing.API)'
+2022-08-22 22:24:31.457 +03:00 [INF] Route matched with {action = "PostCountry", controller = "Countries"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HotelListing.API.Data.Country]] PostCountry(HotelListing.API.Models.Country.CreateCountryDTO) on controller HotelListing.API.Controllers.CountriesController (HotelListing.API).
+2022-08-22 22:24:31.460 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-22 22:24:31.462 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Countries] ([Name], [ShortName])
+VALUES (@p0, @p1);
+SELECT [Id]
+FROM [Countries]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-08-22 22:24:31.470 +03:00 [INF] Executing CreatedAtActionResult, writing value of type 'HotelListing.API.Data.Country'.
+2022-08-22 22:24:31.471 +03:00 [INF] Executed action HotelListing.API.Controllers.CountriesController.PostCountry (HotelListing.API) in 12.3991ms
+2022-08-22 22:24:31.472 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.CountriesController.PostCountry (HotelListing.API)'
+2022-08-22 22:24:31.473 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7234/api/v1/Countries application/json 48 - 201 - application/json;+charset=utf-8;+ver=1 17.5029ms
+2022-08-22 22:24:34.136 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7234/api/v1/Countries application/json 48
+2022-08-22 22:24:34.137 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.CountriesController.PostCountry (HotelListing.API)'
+2022-08-22 22:24:34.138 +03:00 [INF] Route matched with {action = "PostCountry", controller = "Countries"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HotelListing.API.Data.Country]] PostCountry(HotelListing.API.Models.Country.CreateCountryDTO) on controller HotelListing.API.Controllers.CountriesController (HotelListing.API).
+2022-08-22 22:24:34.140 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-22 22:24:34.142 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Countries] ([Name], [ShortName])
+VALUES (@p0, @p1);
+SELECT [Id]
+FROM [Countries]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-08-22 22:24:34.149 +03:00 [INF] Executing CreatedAtActionResult, writing value of type 'HotelListing.API.Data.Country'.
+2022-08-22 22:24:34.149 +03:00 [INF] Executed action HotelListing.API.Controllers.CountriesController.PostCountry (HotelListing.API) in 10.1826ms
+2022-08-22 22:24:34.150 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.CountriesController.PostCountry (HotelListing.API)'
+2022-08-22 22:24:34.151 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7234/api/v1/Countries application/json 48 - 201 - application/json;+charset=utf-8;+ver=1 14.4507ms
+2022-08-22 22:24:37.357 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/v2/Countries - -
+2022-08-22 22:24:37.358 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.CountriesV2Controller.GetCountries (HotelListing.API)'
+2022-08-22 22:24:37.359 +03:00 [INF] Route matched with {action = "GetCountries", controller = "CountriesV"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[HotelListing.API.Models.Country.GetCountryDTO]]] GetCountries() on controller HotelListing.API.Controllers.CountriesV2Controller (HotelListing.API).
+2022-08-22 22:24:37.361 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-22 22:24:37.363 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+2022-08-22 22:24:37.365 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.API.Models.Country.GetCountryDTO, HotelListing.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-22 22:24:37.366 +03:00 [INF] Executed action HotelListing.API.Controllers.CountriesV2Controller.GetCountries (HotelListing.API) in 5.4475ms
+2022-08-22 22:24:37.366 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.CountriesV2Controller.GetCountries (HotelListing.API)'
+2022-08-22 22:24:37.367 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/v2/Countries - - - 200 - application/json;+charset=utf-8;+ver=2 9.5963ms

@@ -1,0 +1,294 @@
+2022-08-20 18:36:32.455 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-20 18:36:32.492 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-20 18:36:32.496 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-20 18:36:32.497 +03:00 [INF] Hosting environment: Development
+2022-08-20 18:36:32.497 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-20 18:36:32.722 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-20 18:36:32.933 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-20 18:36:32.933 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-20 18:36:32.940 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 221.1409ms
+2022-08-20 18:36:32.940 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 5.5516ms
+2022-08-20 18:36:32.947 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 13.1592ms
+2022-08-20 18:36:33.010 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-20 18:36:33.115 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 105.0292ms
+2022-08-20 18:37:23.836 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7234/api/Account/register application/json 99
+2022-08-20 18:37:23.843 +03:00 [INF] CORS policy execution successful.
+2022-08-20 18:37:23.849 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.AccountController.Register (HotelListing.API)'
+2022-08-20 18:37:23.875 +03:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Register(HotelListing.API.Models.Users.ApiUserDTO) on controller HotelListing.API.Controllers.AccountController (HotelListing.API).
+2022-08-20 18:40:02.605 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-20 18:52:17.143 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-20 18:52:17.180 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-20 18:52:17.185 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-20 18:52:17.185 +03:00 [INF] Hosting environment: Development
+2022-08-20 18:52:17.186 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-20 18:52:17.688 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-20 18:52:17.881 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-20 18:52:17.881 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-20 18:52:17.923 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 200.2930ms
+2022-08-20 18:52:17.923 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 40.8985ms
+2022-08-20 18:52:17.934 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 52.8252ms
+2022-08-20 18:52:17.976 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-20 18:52:18.068 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 91.4652ms
+2022-08-20 18:52:45.038 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7234/api/Account/register application/json 107
+2022-08-20 18:52:45.042 +03:00 [INF] CORS policy execution successful.
+2022-08-20 18:52:45.048 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.AccountController.Register (HotelListing.API)'
+2022-08-20 18:52:45.072 +03:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Register(HotelListing.API.Models.Users.ApiUserDTO) on controller HotelListing.API.Controllers.AccountController (HotelListing.API).
+2022-08-20 18:52:59.320 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-20 18:53:01.545 +03:00 [ERR] Failed executing DbCommand (1,765ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-08-20 18:53:01.575 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'HotelListing.API.Data.HotelListingDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'FirstName'.
+Invalid column name 'LastName'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:48049613-30ed-4662-9fcd-1309cebeeee6
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'FirstName'.
+Invalid column name 'LastName'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:48049613-30ed-4662-9fcd-1309cebeeee6
+Error Number:207,State:1,Class:16
+2022-08-20 18:55:10.812 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-20 18:55:18.480 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-20 18:55:18.904 +03:00 [INF] Executed DbCommand (187ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [HotelListinAPIgDb];
+2022-08-20 18:55:18.946 +03:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [HotelListinAPIgDb] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2022-08-20 18:55:18.957 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-08-20 18:55:19.019 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2022-08-20 18:55:19.022 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-08-20 18:55:19.038 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-08-20 18:55:19.041 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-08-20 18:55:19.052 +03:00 [INF] Applying migration '20220820155511_InitializeDatabase'.
+2022-08-20 18:55:19.102 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+);
+2022-08-20 18:55:19.103 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUsers] (
+    [Id] nvarchar(450) NOT NULL,
+    [FirstName] nvarchar(max) NULL,
+    [LastName] nvarchar(max) NULL,
+    [UserName] nvarchar(256) NULL,
+    [NormalizedUserName] nvarchar(256) NULL,
+    [Email] nvarchar(256) NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_AspNetUsers] PRIMARY KEY ([Id])
+);
+2022-08-20 18:55:19.104 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Countries] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    [ShortName] nvarchar(max) NULL,
+    CONSTRAINT [PK_Countries] PRIMARY KEY ([Id])
+);
+2022-08-20 18:55:19.105 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetRoleClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoleClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetRoleClaims_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE
+);
+2022-08-20 18:55:19.106 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetUserClaims_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2022-08-20 18:55:19.107 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserLogins] (
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [ProviderKey] nvarchar(450) NOT NULL,
+    [ProviderDisplayName] nvarchar(max) NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+    CONSTRAINT [FK_AspNetUserLogins_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2022-08-20 18:55:19.108 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserRoles] (
+    [UserId] nvarchar(450) NOT NULL,
+    [RoleId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserRoles] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_AspNetUserRoles_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_AspNetUserRoles_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2022-08-20 18:55:19.113 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserTokens] (
+    [UserId] nvarchar(450) NOT NULL,
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [Name] nvarchar(450) NOT NULL,
+    [Value] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+    CONSTRAINT [FK_AspNetUserTokens_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2022-08-20 18:55:19.114 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Hotels] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    [Rating] float NOT NULL,
+    [Adress] nvarchar(max) NULL,
+    [CountryId] int NOT NULL,
+    CONSTRAINT [PK_Hotels] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Hotels_Countries_CountryId] FOREIGN KEY ([CountryId]) REFERENCES [Countries] ([Id]) ON DELETE CASCADE
+);
+2022-08-20 18:55:19.128 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'ConcurrencyStamp', N'Name', N'NormalizedName') AND [object_id] = OBJECT_ID(N'[AspNetRoles]'))
+    SET IDENTITY_INSERT [AspNetRoles] ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (N'2c4241af-cde9-4470-8921-7e95a1cdba84', N'722f90f6-ff74-4fcf-80b1-8fc98a0fe15a', N'User', N'USER'),
+(N'72098e09-88a2-4338-a52a-348ba804d2b8', N'186bb609-3b4e-4bef-bb7f-e953b2c4253e', N'Administrator', N'ADMINISTIRATOR');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'ConcurrencyStamp', N'Name', N'NormalizedName') AND [object_id] = OBJECT_ID(N'[AspNetRoles]'))
+    SET IDENTITY_INSERT [AspNetRoles] OFF;
+2022-08-20 18:55:19.134 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Name', N'ShortName') AND [object_id] = OBJECT_ID(N'[Countries]'))
+    SET IDENTITY_INSERT [Countries] ON;
+INSERT INTO [Countries] ([Id], [Name], [ShortName])
+VALUES (1, N'Türkiye', N'Tr'),
+(2, N'İngiltere', N'En'),
+(3, N'Fransa', N'Fr'),
+(4, N'Bahama', N'Bs');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Name', N'ShortName') AND [object_id] = OBJECT_ID(N'[Countries]'))
+    SET IDENTITY_INSERT [Countries] OFF;
+2022-08-20 18:55:19.141 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Adress', N'CountryId', N'Name', N'Rating') AND [object_id] = OBJECT_ID(N'[Hotels]'))
+    SET IDENTITY_INSERT [Hotels] ON;
+INSERT INTO [Hotels] ([Id], [Adress], [CountryId], [Name], [Rating])
+VALUES (1, N'İstanbul', 1, N'Türkiye Hotel', 4.7000000000000002E0),
+(2, N'İstanbul', 2, N'İngiltere Hotel', 4.7000000000000002E0),
+(3, N'İstanbul', 3, N'Fıransa Hotel', 4.2000000000000002E0),
+(4, N'İstanbul', 4, N'Bahama Hotel', 3.7000000000000002E0),
+(5, N'İstanbul', 1, N'Türkiye Hotel', 5.0E0);
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Adress', N'CountryId', N'Name', N'Rating') AND [object_id] = OBJECT_ID(N'[Hotels]'))
+    SET IDENTITY_INSERT [Hotels] OFF;
+2022-08-20 18:55:19.142 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetRoleClaims_RoleId] ON [AspNetRoleClaims] ([RoleId]);
+2022-08-20 18:55:19.143 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [RoleNameIndex] ON [AspNetRoles] ([NormalizedName]) WHERE [NormalizedName] IS NOT NULL;
+2022-08-20 18:55:19.144 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserClaims_UserId] ON [AspNetUserClaims] ([UserId]);
+2022-08-20 18:55:22.000 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserLogins_UserId] ON [AspNetUserLogins] ([UserId]);
+2022-08-20 18:55:22.001 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserRoles_RoleId] ON [AspNetUserRoles] ([RoleId]);
+2022-08-20 18:55:22.001 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [EmailIndex] ON [AspNetUsers] ([NormalizedEmail]);
+2022-08-20 18:55:22.002 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [UserNameIndex] ON [AspNetUsers] ([NormalizedUserName]) WHERE [NormalizedUserName] IS NOT NULL;
+2022-08-20 18:55:22.007 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Hotels_CountryId] ON [Hotels] ([CountryId]);
+2022-08-20 18:55:22.008 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220820155511_InitializeDatabase', N'6.0.7');
+2022-08-20 18:55:42.804 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-20 18:55:42.845 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-20 18:55:42.849 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-20 18:55:42.850 +03:00 [INF] Hosting environment: Development
+2022-08-20 18:55:42.850 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-20 18:55:43.580 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-20 18:55:43.780 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-20 18:55:43.780 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-20 18:55:43.787 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 208.8749ms
+2022-08-20 18:55:43.787 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 5.5564ms
+2022-08-20 18:55:43.801 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 20.5876ms
+2022-08-20 18:55:43.863 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-20 18:55:43.977 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 114.3192ms
+2022-08-20 18:56:08.966 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7234/api/Account/register application/json 110
+2022-08-20 18:56:08.970 +03:00 [INF] CORS policy execution successful.
+2022-08-20 18:56:08.976 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.AccountController.Register (HotelListing.API)'
+2022-08-20 18:56:08.998 +03:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Register(HotelListing.API.Models.Users.ApiUserDTO) on controller HotelListing.API.Controllers.AccountController (HotelListing.API).
+2022-08-20 18:56:25.258 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-20 18:56:27.071 +03:00 [INF] Executed DbCommand (65ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-08-20 18:56:27.279 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2022-08-20 18:56:33.841 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2022-08-20 18:56:33.891 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE ([a].[UserId] = @__p_0) AND ([a].[RoleId] = @__p_1)
+2022-08-20 18:56:33.899 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2022-08-20 18:56:33.916 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-08-20 18:56:33.935 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+2022-08-20 18:56:33.943 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT;
+2022-08-20 18:56:45.292 +03:00 [INF] Executing OkObjectResult, writing value of type 'HotelListing.API.Models.Users.ApiUserDTO'.
+2022-08-20 18:56:45.325 +03:00 [INF] Executed action HotelListing.API.Controllers.AccountController.Register (HotelListing.API) in 36320.8043ms
+2022-08-20 18:56:45.327 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.AccountController.Register (HotelListing.API)'
+2022-08-20 18:56:45.335 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7234/api/Account/register application/json 110 - 200 - application/json;+charset=utf-8 36368.9726ms

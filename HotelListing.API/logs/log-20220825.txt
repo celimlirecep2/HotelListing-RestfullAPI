@@ -1,0 +1,407 @@
+2022-08-25 20:04:03.890 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-25 20:04:04.567 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-25 20:04:04.568 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-25 20:04:04.573 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-25 20:04:04.574 +03:00 [INF] Hosting environment: Development
+2022-08-25 20:04:04.574 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-25 20:04:05.927 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-25 20:04:06.249 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-25 20:04:06.249 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-25 20:04:06.262 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 12.0131ms
+2022-08-25 20:04:06.262 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 339.0467ms
+2022-08-25 20:04:06.310 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 60.9276ms
+2022-08-25 20:04:06.363 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-25 20:04:06.529 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 166.3512ms
+2022-08-25 20:06:21.416 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7234/api/Account/login application/json 62
+2022-08-25 20:06:22.082 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.AccountController.Login (HotelListing.API)'
+2022-08-25 20:06:22.128 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(HotelListing.API.Data.Models.Users.LoginDTO) on controller HotelListing.API.Controllers.AccountController (HotelListing.API).
+2022-08-25 20:06:24.205 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-25 20:06:27.472 +03:00 [INF] Executed DbCommand (123ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2022-08-25 20:06:27.811 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2022-08-25 20:06:27.839 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2022-08-25 20:06:28.284 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2022-08-25 20:06:28.346 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-08-25 20:06:28.527 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [AspNetUserTokens]
+WHERE [LoginProvider] = @p0 AND [Name] = @p1 AND [UserId] = @p2;
+SELECT @@ROWCOUNT;
+2022-08-25 20:06:28.558 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT;
+2022-08-25 20:06:28.616 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2022-08-25 20:06:28.637 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-08-25 20:06:28.653 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserTokens] ([LoginProvider], [Name], [UserId], [Value])
+VALUES (@p0, @p1, @p2, @p3);
+2022-08-25 20:06:28.655 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT;
+2022-08-25 20:06:28.660 +03:00 [INF] Registration attempt for recep@example.com
+2022-08-25 20:06:28.679 +03:00 [INF] Executing OkObjectResult, writing value of type 'HotelListing.API.Data.Models.Users.AuthResponseDTO'.
+2022-08-25 20:06:28.701 +03:00 [INF] Executed action HotelListing.API.Controllers.AccountController.Login (HotelListing.API) in 6563.082ms
+2022-08-25 20:06:28.703 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.AccountController.Login (HotelListing.API)'
+2022-08-25 20:06:28.720 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7234/api/Account/login application/json 62 - 200 - application/json;+charset=utf-8;+ver=1.0 7304.3349ms
+2022-08-25 20:06:32.544 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/v2/Countries?$filter=name%20eq%20%27T%C3%BCrkiye%27&$orderby=name - -
+2022-08-25 20:06:32.662 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-08-25 20:06:32.899 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2022-08-25 20:06:32.913 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-08-25 20:06:32.930 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-08-25 20:06:32.932 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/v2/Countries?$filter=name%20eq%20%27T%C3%BCrkiye%27&$orderby=name - - - 401 0 - 387.6435ms
+2022-08-25 20:06:50.793 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/v2/Countries?$filter=name%20eq%20%27T%C3%BCrkiye%27&$orderby=name - -
+2022-08-25 20:06:50.826 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.CountriesV2Controller.GetCountries (HotelListing.API)'
+2022-08-25 20:06:50.831 +03:00 [INF] Route matched with {action = "GetCountries", controller = "CountriesV"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[HotelListing.API.Data.Models.Country.GetCountryDTO]]] GetCountries() on controller HotelListing.API.Controllers.CountriesV2Controller (HotelListing.API).
+2022-08-25 20:06:52.460 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-25 20:06:52.478 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+2022-08-25 20:06:52.593 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Linq.EnumerableQuery`1[[HotelListing.API.Data.Models.Country.GetCountryDTO, HotelListing.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-25 20:06:52.663 +03:00 [INF] Executed action HotelListing.API.Controllers.CountriesV2Controller.GetCountries (HotelListing.API) in 1828.3518ms
+2022-08-25 20:06:52.667 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.CountriesV2Controller.GetCountries (HotelListing.API)'
+2022-08-25 20:06:52.675 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/v2/Countries?$filter=name%20eq%20%27T%C3%BCrkiye%27&$orderby=name - - - 200 - application/json;+charset=utf-8;+ver=2 1882.1489ms
+2022-08-25 22:50:09.425 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-25 22:50:09.751 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-25 22:50:09.752 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-25 22:50:09.758 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-25 22:50:09.759 +03:00 [INF] Hosting environment: Development
+2022-08-25 22:50:09.760 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-25 22:50:10.098 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-25 22:50:10.439 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-25 22:50:10.439 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-25 22:50:10.456 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 363.5839ms
+2022-08-25 22:50:10.456 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 15.3589ms
+2022-08-25 22:50:10.470 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 31.2519ms
+2022-08-25 22:50:10.570 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-25 22:50:10.799 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 229.2226ms
+2022-08-25 22:54:57.709 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-25 22:54:58.069 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-25 22:54:58.071 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-25 22:54:58.075 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-25 22:54:58.076 +03:00 [INF] Hosting environment: Development
+2022-08-25 22:54:58.077 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-25 22:54:58.862 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-25 22:54:59.199 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-25 22:54:59.199 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-25 22:54:59.212 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 11.9199ms
+2022-08-25 22:54:59.212 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 355.0073ms
+2022-08-25 22:54:59.225 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 26.1561ms
+2022-08-25 22:54:59.326 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-25 22:54:59.552 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 226.4516ms
+2022-08-25 22:55:20.754 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7234/api/Account/login application/json;odata.metadata=minimal;odata.streaming=true;+ver=1.0 59
+2022-08-25 22:55:20.803 +03:00 [INF] CORS policy execution successful.
+2022-08-25 22:55:20.918 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.AccountController.Login (HotelListing.API)'
+2022-08-25 22:55:20.968 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(HotelListing.API.Core.Models.Users.LoginDTO) on controller HotelListing.API.Controllers.AccountController (HotelListing.API).
+2022-08-25 22:55:22.943 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-25 22:55:25.089 +03:00 [INF] Executed DbCommand (119ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2022-08-25 22:55:25.400 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2022-08-25 22:55:25.427 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2022-08-25 22:55:25.693 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2022-08-25 22:55:25.762 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-08-25 22:55:25.942 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [AspNetUserTokens]
+WHERE [LoginProvider] = @p0 AND [Name] = @p1 AND [UserId] = @p2;
+SELECT @@ROWCOUNT;
+2022-08-25 22:55:25.975 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT;
+2022-08-25 22:55:26.040 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2022-08-25 22:55:26.061 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-08-25 22:55:26.077 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserTokens] ([LoginProvider], [Name], [UserId], [Value])
+VALUES (@p0, @p1, @p2, @p3);
+2022-08-25 22:55:26.080 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT;
+2022-08-25 22:55:26.084 +03:00 [INF] Registration attempt for recep@example.com
+2022-08-25 22:55:26.103 +03:00 [INF] Executing OkObjectResult, writing value of type 'HotelListing.API.Core.Models.Users.AuthResponseDTO'.
+2022-08-25 22:55:26.127 +03:00 [INF] Executed action HotelListing.API.Controllers.AccountController.Login (HotelListing.API) in 5146.1055ms
+2022-08-25 22:55:26.130 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.AccountController.Login (HotelListing.API)'
+2022-08-25 22:55:26.149 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7234/api/Account/login application/json;odata.metadata=minimal;odata.streaming=true;+ver=1.0 59 - 200 - application/json;+charset=utf-8;+ver=1.0 5394.6362ms
+2022-08-25 22:55:58.257 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7234/api/v1/countries application/json;odata.metadata=minimal;odata.streaming=true;+ver=1.0 47
+2022-08-25 22:55:58.267 +03:00 [INF] CORS policy execution successful.
+2022-08-25 22:55:58.278 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-08-25 22:55:58.292 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-08-25 22:55:58.294 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7234/api/v1/countries application/json;odata.metadata=minimal;odata.streaming=true;+ver=1.0 47 - 401 0 - 37.6624ms
+2022-08-25 22:56:25.572 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7234/api/v1/countries application/json;odata.metadata=minimal;odata.streaming=true;+ver=1.0 47
+2022-08-25 22:56:25.585 +03:00 [INF] CORS policy execution successful.
+2022-08-25 22:56:25.718 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.CountriesController.PostCountry (HotelListing.API)'
+2022-08-25 22:56:25.725 +03:00 [INF] Route matched with {action = "PostCountry", controller = "Countries"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HotelListing.API.Core.Models.Country.CountryDTO]] PostCountry(HotelListing.API.Core.Models.Country.CreateCountryDTO) on controller HotelListing.API.Controllers.CountriesController (HotelListing.API).
+2022-08-25 22:56:25.820 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-25 22:56:25.905 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Countries] ([Name], [ShortName])
+VALUES (@p0, @p1);
+SELECT [Id]
+FROM [Countries]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-08-25 22:56:25.965 +03:00 [INF] Executing CreatedAtActionResult, writing value of type 'HotelListing.API.Core.Models.Country.GetCountryDTO'.
+2022-08-25 22:56:26.008 +03:00 [INF] Executed action HotelListing.API.Controllers.CountriesController.PostCountry (HotelListing.API) in 278.1449ms
+2022-08-25 22:56:26.010 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.CountriesController.PostCountry (HotelListing.API)'
+2022-08-25 22:56:26.013 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7234/api/v1/countries application/json;odata.metadata=minimal;odata.streaming=true;+ver=1.0 47 - 201 - application/json;+charset=utf-8;+ver=1 440.8005ms
+2022-08-25 22:58:01.367 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/api/v1/countries/GetAll - -
+2022-08-25 22:58:01.379 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)'
+2022-08-25 22:58:01.384 +03:00 [INF] Route matched with {action = "GetCountries", controller = "Countries"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[HotelListing.API.Core.Models.Country.GetCountryDTO]]] GetCountries() on controller HotelListing.API.Controllers.CountriesController (HotelListing.API).
+2022-08-25 22:58:01.400 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-25 22:58:01.465 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Name], [c].[ShortName], [c].[Id]
+FROM [Countries] AS [c]
+2022-08-25 22:58:01.476 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.API.Core.Models.Country.GetCountryDTO, HotelListing.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-25 22:58:01.480 +03:00 [INF] Executed action HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API) in 94.0555ms
+2022-08-25 22:58:01.490 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)'
+2022-08-25 22:58:01.492 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/api/v1/countries/GetAll - - - 200 - application/json;+charset=utf-8;+ver=1 126.4655ms
+2022-08-25 22:58:15.246 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7234/api/v1/countries/10 - -
+2022-08-25 22:58:15.247 +03:00 [INF] CORS policy execution successful.
+2022-08-25 22:58:15.250 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.CountriesController.DeleteCountry (HotelListing.API)'
+2022-08-25 22:58:15.258 +03:00 [INF] Route matched with {action = "DeleteCountry", controller = "Countries"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteCountry(Int32) on controller HotelListing.API.Controllers.CountriesController (HotelListing.API).
+2022-08-25 22:58:15.277 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-25 22:58:15.290 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name], [c].[ShortName]
+FROM [Countries] AS [c]
+WHERE [c].[Id] = @__p_0
+2022-08-25 22:58:15.309 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Countries]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2022-08-25 22:58:15.324 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2022-08-25 22:58:15.325 +03:00 [INF] Executed action HotelListing.API.Controllers.CountriesController.DeleteCountry (HotelListing.API) in 63.9743ms
+2022-08-25 22:58:15.327 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.CountriesController.DeleteCountry (HotelListing.API)'
+2022-08-25 22:58:15.329 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7234/api/v1/countries/10 - - - 204 - - 83.2983ms
+2022-08-25 23:00:30.663 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-25 23:00:31.006 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-25 23:00:31.007 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-25 23:00:31.012 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-25 23:00:31.012 +03:00 [INF] Hosting environment: Development
+2022-08-25 23:00:31.013 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-25 23:00:31.916 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-25 23:00:32.282 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-25 23:00:32.282 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-25 23:00:32.294 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 382.5287ms
+2022-08-25 23:00:32.294 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 9.9116ms
+2022-08-25 23:00:32.312 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 30.1763ms
+2022-08-25 23:00:32.409 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-25 23:00:32.624 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 214.6817ms
+2022-08-25 23:01:03.888 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7234/api/Account/login application/json;odata.metadata=minimal;odata.streaming=true;+ver=1.0 59
+2022-08-25 23:01:03.949 +03:00 [INF] CORS policy execution successful.
+2022-08-25 23:01:04.060 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.AccountController.Login (HotelListing.API)'
+2022-08-25 23:01:04.115 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(HotelListing.API.Core.Models.Users.LoginDTO) on controller HotelListing.API.Controllers.AccountController (HotelListing.API).
+2022-08-25 23:01:06.091 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-25 23:01:07.366 +03:00 [INF] Executed DbCommand (119ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2022-08-25 23:01:07.677 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2022-08-25 23:01:07.710 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2022-08-25 23:01:07.943 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2022-08-25 23:01:08.005 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-08-25 23:01:08.187 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [AspNetUserTokens]
+WHERE [LoginProvider] = @p0 AND [Name] = @p1 AND [UserId] = @p2;
+SELECT @@ROWCOUNT;
+2022-08-25 23:01:08.218 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT;
+2022-08-25 23:01:08.280 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2022-08-25 23:01:08.312 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-08-25 23:01:08.330 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserTokens] ([LoginProvider], [Name], [UserId], [Value])
+VALUES (@p0, @p1, @p2, @p3);
+2022-08-25 23:01:08.333 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT;
+2022-08-25 23:01:08.338 +03:00 [INF] Registration attempt for recep@example.com
+2022-08-25 23:01:08.360 +03:00 [INF] Executing OkObjectResult, writing value of type 'HotelListing.API.Core.Models.Users.AuthResponseDTO'.
+2022-08-25 23:01:08.383 +03:00 [INF] Executed action HotelListing.API.Controllers.AccountController.Login (HotelListing.API) in 4254.2054ms
+2022-08-25 23:01:08.386 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.AccountController.Login (HotelListing.API)'
+2022-08-25 23:01:08.401 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7234/api/Account/login application/json;odata.metadata=minimal;odata.streaming=true;+ver=1.0 59 - 200 - application/json;+charset=utf-8;+ver=1.0 4512.5835ms
+2022-08-25 23:01:33.203 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/api/v1/countries/GetAll - -
+2022-08-25 23:01:33.221 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-08-25 23:01:33.237 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-08-25 23:01:33.239 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/api/v1/countries/GetAll - - - 401 0 - 36.2817ms
+2022-08-25 23:01:48.256 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/api/v2/countries/GetAll - -
+2022-08-25 23:01:48.260 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-08-25 23:01:48.262 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-08-25 23:01:48.263 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/api/v2/countries/GetAll - - - 401 0 - 7.0328ms
+2022-08-25 23:02:15.644 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7234/api/v1/countries?api-version=1 application/json;odata.metadata=minimal;odata.streaming=true;+ver=1.0 47
+2022-08-25 23:02:15.651 +03:00 [INF] CORS policy execution successful.
+2022-08-25 23:02:15.653 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-08-25 23:02:15.654 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-08-25 23:02:15.655 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7234/api/v1/countries?api-version=1 application/json;odata.metadata=minimal;odata.streaming=true;+ver=1.0 47 - 401 0 - 12.9852ms
+2022-08-25 23:02:32.883 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/api/v1/countries/1 - -
+2022-08-25 23:02:32.886 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-08-25 23:02:32.887 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-08-25 23:02:32.888 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/api/v1/countries/1 - - - 401 0 - 5.4518ms
+2022-08-25 23:04:27.028 +03:00 [INF] User profile is available. Using 'C:\Users\Recep-Celimli\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-25 23:04:27.321 +03:00 [INF] Now listening on: https://localhost:7234
+2022-08-25 23:04:27.322 +03:00 [INF] Now listening on: http://localhost:5234
+2022-08-25 23:04:27.334 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-25 23:04:27.335 +03:00 [INF] Hosting environment: Development
+2022-08-25 23:04:27.336 +03:00 [INF] Content root path: D:\MyFolders\RestFullApi\HotelListing\HotelListing.API\
+2022-08-25 23:04:27.703 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/index.html - -
+2022-08-25 23:04:28.041 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - -
+2022-08-25 23:04:28.041 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/_vs/browserLink - -
+2022-08-25 23:04:28.059 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/index.html - - - 200 - text/html;charset=utf-8 360.7904ms
+2022-08-25 23:04:28.059 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 15.8309ms
+2022-08-25 23:04:28.075 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 33.2067ms
+2022-08-25 23:04:28.166 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - -
+2022-08-25 23:04:28.390 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 223.4224ms
+2022-08-25 23:04:46.481 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7234/api/Account/login application/json;odata.metadata=minimal;odata.streaming=true;+ver=1.0 59
+2022-08-25 23:04:46.528 +03:00 [INF] CORS policy execution successful.
+2022-08-25 23:04:46.655 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.AccountController.Login (HotelListing.API)'
+2022-08-25 23:04:46.703 +03:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(HotelListing.API.Core.Models.Users.LoginDTO) on controller HotelListing.API.Controllers.AccountController (HotelListing.API).
+2022-08-25 23:04:48.603 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-25 23:04:49.874 +03:00 [INF] Executed DbCommand (128ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2022-08-25 23:04:50.179 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2022-08-25 23:04:50.211 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2022-08-25 23:04:50.429 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2022-08-25 23:04:50.489 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-08-25 23:04:50.684 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [AspNetUserTokens]
+WHERE [LoginProvider] = @p0 AND [Name] = @p1 AND [UserId] = @p2;
+SELECT @@ROWCOUNT;
+2022-08-25 23:04:50.720 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT;
+2022-08-25 23:04:50.786 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2022-08-25 23:04:50.808 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-08-25 23:04:50.828 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserTokens] ([LoginProvider], [Name], [UserId], [Value])
+VALUES (@p0, @p1, @p2, @p3);
+2022-08-25 23:04:50.831 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT;
+2022-08-25 23:04:50.835 +03:00 [INF] Registration attempt for recep@example.com
+2022-08-25 23:04:50.854 +03:00 [INF] Executing OkObjectResult, writing value of type 'HotelListing.API.Core.Models.Users.AuthResponseDTO'.
+2022-08-25 23:04:50.871 +03:00 [INF] Executed action HotelListing.API.Controllers.AccountController.Login (HotelListing.API) in 4157.9364ms
+2022-08-25 23:04:50.874 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.AccountController.Login (HotelListing.API)'
+2022-08-25 23:04:50.889 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7234/api/Account/login application/json;odata.metadata=minimal;odata.streaming=true;+ver=1.0 59 - 200 - application/json;+charset=utf-8;+ver=1.0 4408.1654ms
+2022-08-25 23:05:32.525 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7234/api/v1/countries/GetAll - -
+2022-08-25 23:05:32.666 +03:00 [INF] Executing endpoint 'HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)'
+2022-08-25 23:05:32.672 +03:00 [INF] Route matched with {action = "GetCountries", controller = "Countries"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[HotelListing.API.Core.Models.Country.GetCountryDTO]]] GetCountries() on controller HotelListing.API.Controllers.CountriesController (HotelListing.API).
+2022-08-25 23:05:32.728 +03:00 [INF] Entity Framework Core 6.0.7 initialized 'HotelListingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.7' with options: None
+2022-08-25 23:05:32.805 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Name], [c].[ShortName], [c].[Id]
+FROM [Countries] AS [c]
+2022-08-25 23:05:32.813 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelListing.API.Core.Models.Country.GetCountryDTO, HotelListing.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-25 23:05:32.818 +03:00 [INF] Executed action HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API) in 143.6138ms
+2022-08-25 23:05:32.820 +03:00 [INF] Executed endpoint 'HotelListing.API.Controllers.CountriesController.GetCountries (HotelListing.API)'
+2022-08-25 23:05:32.823 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7234/api/v1/countries/GetAll - - - 200 - application/json;+charset=utf-8;+ver=1 298.0715ms
